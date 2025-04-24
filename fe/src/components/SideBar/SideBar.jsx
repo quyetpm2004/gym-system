@@ -1,46 +1,33 @@
-import { FaHome, FaTools, FaUser, FaDochub , FaRegCalendarTimes } from "react-icons/fa";
+import React from 'react';
+import { FaHome, FaTools, FaUsers, FaDochub, FaRegCalendarTimes, FaUser } from "react-icons/fa";
 import { IoTime } from "react-icons/io5";
-export default function SideBar(){
-  return (
-          <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-            <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-              <li className="nav-item">
-                <a href="/" className="nav-link align-middle px-0">
-                  <span><FaHome  className="fs-4" /> </span>
-                  <span className="ms-1 d-none d-sm-inline">Trang chủ</span>
-                </a>
-              </li>
-              <li>
-                <a href="/thiet-bi" className="nav-link px-0 align-middle">
-                <span><FaTools className="fs-4" /> </span>
-                  <span className="ms-1 d-none d-sm-inline">Quản lý thiết bị</span>
-                </a>
-              </li>
-              <li>
-                <a href="/nguoi-dung" className="nav-link px-0 align-middle">
-                <span> <FaRegCalendarTimes  className="fs-4" /> </span>
-                  <span className="ms-1 d-none d-sm-inline">Quản lý người dùng</span>
-                </a>
-              </li>
-              <li>
-                <a href="/khach-hang" className="nav-link px-0 align-middle">
-                <span> <FaUser className="fs-4" /> </span>
-                  <span className="ms-1 d-none d-sm-inline">Quản lý khách hàng</span>
-                </a>
-              </li>
-              <li>
-                <a href="/thong-ke-bao-cao" className="nav-link px-0 align-middle">
-                <span> <FaDochub  className="fs-4" />  </span>
-                  <span className="ms-1 d-none d-sm-inline">Thống kê và báo cáo</span>
-                </a>
-              </li>
-              <li>
-                <a href="/hlv" className="nav-link px-0 align-middle">
-                <span><IoTime   className="fs-4" /> </span>
-                  <span className="ms-1 d-none d-sm-inline">Quản lý huấn luyện viên</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-  );
-};
+import { NavLink } from 'react-router-dom';
+
+const links = [
+  { path: '/admin/dashboard', label: 'Trang chủ', icon: <FaHome /> },
+  { path: '/admin/device', label: 'Quản lý thiết bị', icon: <FaTools /> },
+  { path: '/admin/customer', label: 'Quản lý khách hàng', icon: <FaUsers /> },
+  { path: '/admin/user', label: 'Quản lý người dùng', icon: <FaDochub /> },
+  { path: '/admin/coach', label: 'Quản lý huấn luyện viên', icon: <IoTime /> },
+  { path: '/admin/report', label: 'Thống kê và Báo cáo', icon: <FaRegCalendarTimes /> },
+  { path: '/admin/profile', label: 'Profile', icon: <FaUser /> },
+];
+
+const TrainerSidebar = () => (
+  <div className="bg-white border-end p-4" style={{ width: '250px', height: '100vh' }}>
+    <h2 className="h5 mb-4">🏋️‍♂️ Administrator </h2>
+    <nav>
+      {links.map(({ path, label, icon }) => (
+        <NavLink
+          key={path}
+          to={path}
+          className={({ isActive }) => `d-flex align-items-center mb-3 text-decoration-none ${isActive ? 'text-primary fw-bold' : 'text-dark'}`}
+        >
+          <span className="me-2">{icon}</span> {label}
+        </NavLink>
+      ))}
+    </nav>
+  </div>
+);
+
+export default TrainerSidebar;

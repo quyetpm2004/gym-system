@@ -9,11 +9,11 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/dang-nhap' element={<LoginPage/>} />
-        <Route path='/' element={<HomePage/>} />
-        <Route path='/thiet-bi' element={<DevicePage/>} />
-        <Route path='/khach-hang' element={<CustomerPage/>} />
-        <Route path='/nguoi-dung' element={<UserPage/>} />
+        <Route path='/' element={<LoginPage/>} />
+        <Route path='/admin/dashboard' element={<HomePage/>} />
+        <Route path='/admin/device' element={<DevicePage/>} />
+        <Route path='/admin/customer' element={<CustomerPage/>} />
+        <Route path='/admin/user' element={<UserPage/>} />
       </Routes>
     </div>
   )
