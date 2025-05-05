@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdEdit } from "react-icons/md";
 import { FaRegTrashAlt } from "react-icons/fa";
-import ModalEditCustomer from './ModalEditCustomer/ModalEditCustomer';
+import ModalEditCustomer from './Modal/ModalEditCustomer';
 
 export default function CustomerContent() {
     const customers = [
@@ -37,7 +37,7 @@ export default function CustomerContent() {
     }
 
     return (
-        <div className="mt-3">
+        <div>
             <h5>Danh sách khách hàng</h5>
             <form className="d-flex mt-4" role="search">
               <input className="form-control" style={{width: 200, marginRight: "10px"}} type="search" placeholder="Nhập tên khách hàng" aria-label="Search"/>

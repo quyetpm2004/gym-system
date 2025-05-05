@@ -1,9 +1,8 @@
-import Header from '../components/Header/Header'
+import Header from '../components/Admin/Header'
 import Login from '../components/Login/Login'
 function LoginPage() {
     return (
         <div>
-            <Header />
             <div className="container-fluid">
                     <div className="row flex-nowrap">
                         <Login/>

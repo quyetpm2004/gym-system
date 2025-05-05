@@ -2,8 +2,8 @@ import { useState } from "react";
 import { MdEdit } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
 import { FaRegTrashAlt } from "react-icons/fa";
-import ModalAddUser from './ModalAddUser/ModalAddUser';
-import ModalEditUser from "./ModalEditUser/ModalEditUser";
+import ModalAddUser from './Modal/ModalAddUser';
+import ModalEditUser from "./Modal/ModalEditUser";
 
 export default function UserContent() {
     const users = [
@@ -49,7 +49,7 @@ export default function UserContent() {
     }
 
     return (
-        <div className="mt-3">
+        <div>
             <div className="d-flex justify-content-between align-items-center">
                 <h5>Danh sách người dùng</h5>
                 <button 
@@ -60,8 +60,8 @@ export default function UserContent() {
             </div>
             <form className="d-flex mt-4" role="search">
               <input className="form-control" style={{width: 200, marginRight: "10px"}} type="text" placeholder="Tên tài khoản" />
-              <input className="form-control" style={{width: 200, marginRight: "10px"}} type="text" placeholder="Email" />
               <input className="form-control" style={{width: 200, marginRight: "10px"}} type="text" placeholder="Số điện thoại" />
+              <input className="form-control" style={{width: 200, marginRight: "10px"}} type="text" placeholder="Vai trò" />
               <button className="btn btn-outline-success" type="submit">Tìm kiếm</button>
             </form>
             <table className="table table-bordered mt-3">

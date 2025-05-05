@@ -2,8 +2,8 @@ import { FaPlus } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 import { FaRegTrashAlt } from "react-icons/fa";
 import './DeviceContent.css';
-import ModalAddDevice from './ModalAddDevice/ModalAddDevice';
-import ModalEditDevice from './ModalEditDevice/ModalEditDevice';
+import ModalAddDevice from './Modal/ModalAddDevice';
+import ModalEditDevice from './Modal/ModalEditDevice';
 import { useState } from "react";
 
 
@@ -50,7 +50,7 @@ export default function DeviceContent() {
     setIsShowModalEditDevice(true)
   }
   return (
-    <div className="mt-3">
+    <div>
       <div className="d-flex justify-content-between align-items-center">
         <h5>Quản lý thiết bị</h5>
         <button 
