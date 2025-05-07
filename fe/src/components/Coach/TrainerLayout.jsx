@@ -4,7 +4,7 @@ import TrainerHeader from './TrainerHeader';
 
 const TrainerLayout = ({ children }) => {
     return (
-        <div className="d-flex bg-light" style={{ height: '100vh' }}>
+        <div className="d-flex bg-light">
             <TrainerSidebar />
             <div className="flex-grow-1">
                 <TrainerHeader />
