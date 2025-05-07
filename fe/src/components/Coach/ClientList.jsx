@@ -25,7 +25,7 @@ export default function ClientList() {
         },
         {
             id: 3,
-            name: "Quyết's Strong",
+            name: "Quyết Strong",
             image: "https://randomuser.me/api/portraits/women/2.jpg",
             address: "Thái Bình",
             membershipType: "Vip",

@@ -5,12 +5,13 @@ import CustomerPage from './pages/admin/Customer'
 import UserPage from './pages/admin/User'
 import LoginPage from './pages/LoginPage'
 
-import Dashboard from './pages/trainer/Dashboard'
-import Clients from './pages/trainer/Clients'
-import Schedule from './pages/trainer/Schedule'
-import TrainingPrograms from './pages/trainer/TrainingPrograms'
-import TrainingProgress from './pages/trainer/TrainingProgress'
-import GymRoom from './pages/admin/GymRoom'
+
+import Dashboard from './pages/coach/Dashboard'
+import Clients from './pages/coach/Clients'
+import Schedule from './pages/coach/Schedule'
+import TrainingPrograms from './pages/coach/TrainingPrograms'
+import TrainingProgress from './pages/coach/TrainingProgress'
+import Profiles from './pages/coach/Profiles'
 
 function App() {
   return (
@@ -22,9 +23,6 @@ function App() {
         <Route path='/admin/device' element={<DevicePage/>} />
         <Route path='/admin/customer' element={<CustomerPage/>} />
         <Route path='/admin/user' element={<UserPage/>} />
-        <Route path='/admin/gymroom' element={<GymRoom/>} />
-
-
 
         {/* Route HLV */}
         <Route path='/coach/dashboard' element={<Dashboard />} />
@@ -32,7 +30,7 @@ function App() {
         <Route path='/coach/schedule' element={<Schedule />} />
         <Route path='/coach/training-progress' element={<TrainingProgress />} />
         <Route path='/coach/training-programs' element={<TrainingPrograms />} />
-      
+        <Route path='/coach/profile' element={<Profiles />} />
       </Routes>
     </div>
   )
@@ -40,4 +38,3 @@ function App() {
 
 export default App
 
-// CSS module
