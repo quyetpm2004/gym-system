@@ -13,13 +13,6 @@ const ModalEditMember = ({ show, handleClose, memberEdit, onSave }) => {
         setEditedMember(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleFileChange = (e) => {
-        const { name, files } = e.target;
-        const file = files[0];
-        const imageUrl = file ? URL.createObjectURL(file) : editedMember.image;
-        setEditedMember(prev => ({ ...prev, [name]: file, image: imageUrl }));
-    };
-
     const handleSubmit = () => {
         if (!editedMember.name || !editedMember.address) {
             alert("Vui lòng điền đầy đủ thông tin!");
@@ -54,14 +47,6 @@ const ModalEditMember = ({ show, handleClose, memberEdit, onSave }) => {
                             <option value="Thường">Thường</option>
                             <option value="Vip">Vip</option>
                         </select>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="image" className="form-label">Ảnh hội viên</label>
-                        <input type="file" className="form-control" name="image" onChange={handleFileChange} />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="registrationDate" className="form-label">Ngày đăng ký</label>
-                        <input type="date" className="form-control" name="registrationDate" value={editedMember.registrationDate} onChange={handleChange} />
                     </div>
                 </form>
             </Modal.Body>
