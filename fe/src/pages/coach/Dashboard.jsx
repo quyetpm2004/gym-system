@@ -3,8 +3,13 @@ import TrainerLayout from '../../components/Coach/TrainerLayout';
 
 const Dashboard = () => (
     <TrainerLayout>
-        <h2 className="h4 mb-4">Chào mừng HLV!</h2>
-        <p>Đây là trang tổng quan. Xem nhanh các hội viên, lịch tập và tiến độ huấn luyện.</p>
+        <div className="h4 mb-4">
+            <img
+                src="/coach-dashboard.png"
+                alt="Coach Dashboard"
+                style={{ borderRadius: '10px' }}
+            />
+        </div>
     </TrainerLayout>
 );
 
