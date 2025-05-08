@@ -316,7 +316,7 @@ const ProgressDashboard = () => {
                     <div className="col-lg-6">
                         <div className="card h-100">
                             <div className="card-body">
-                                <h5 className="fw-bold mb-4">Quản lý Calories</h5>
+                                <h5 className="fw-bold mb-4">Calories</h5>
                                 <div style={{ height: '320px' }}>
                                     <ResponsiveContainer width="100%" height="100%">
                                         <BarChart
@@ -424,7 +424,7 @@ const ProgressDashboard = () => {
 
                                     <div>
                                         <div className="d-flex justify-content-between mb-1">
-                                            <span className="small fw-medium">Khác (Xương, nội tạng...)</span>
+                                            <span className="small fw-medium">Khác</span>
                                             <span className="small fw-medium">{100 - memberData.bodyFat[0].value - (memberData.bodyFat[0].value > 20 ? 75 : 75)}%</span>
                                         </div>
                                         <div className="progress" style={{ height: '8px' }}>
