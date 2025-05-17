@@ -1,0 +1,10 @@
+ .background-radial-gradient {
+
+    background-image: url('/public/login-bg.jpg');
+    background-repeat: no-repeat;
+ }
+
+ .bg-glass {
+     background-color: hsla(0, 0%, 100%, 0.9) !important;
+     backdrop-filter: saturate(200%) blur(25px);
+ }

@@ -3,7 +3,7 @@ import HomePage from './pages/admin/Home'
 import DevicePage from './pages/admin/Device'
 import CustomerPage from './pages/admin/Customer'
 import UserPage from './pages/admin/User'
-import LoginPage from './pages/LoginPage'
+import LoginPage from './pages/login/LoginPage'
 
 
 import Dashboard from './pages/coach/Dashboard'
@@ -17,8 +17,10 @@ function App() {
   return (
     <div>
       <Routes>
+        {/* Login */}
+        <Route path='/' element={<LoginPage />} />
+        
         {/* Route Admin */}
-        <Route path='/login' element={<LoginPage/>} />
         <Route path='/admin/dashboard' element={<HomePage/>} />
         <Route path='/admin/device' element={<DevicePage/>} />
         <Route path='/admin/customer' element={<CustomerPage/>} />
