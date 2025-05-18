@@ -5,17 +5,18 @@ import DevicePage from './pages/admin/AdminDevicePage'
 import CustomerPage from './pages/admin/AdminCustomerPage'
 import StaffPage from './pages/admin/AdminStaffPage'
 import PackagePage from './pages/admin/AdminPackagePage'
-import LoginPage from './pages/LoginPage'
+import LoginPage from './pages/login/LoginPage'
 import ReportPage from './pages/admin/AdminReportPage'
 import FeedbackPage from './pages/admin/AdminFeedbackPage'
-
-// Trainer
-import Dashboard from './pages/trainer/Dashboard'
-import Clients from './pages/trainer/Clients'
-import Schedule from './pages/trainer/Schedule'
-import TrainingPrograms from './pages/trainer/TrainingPrograms'
-import TrainingProgress from './pages/trainer/TrainingProgress'
 import GymRoom from './pages/admin/AdminGymRoomPage'
+
+// Coach
+import Dashboard from './pages/coach/Dashboard'
+import Clients from './pages/coach/Clients'
+import Schedule from './pages/coach/Schedule'
+import TrainingPrograms from './pages/coach/TrainingPrograms'
+import TrainingProgress from './pages/coach/TrainingProgress'
+import Profiles from './pages/coach/TrainingPrograms'
 
 
 // Staff
@@ -26,6 +27,13 @@ import StaffGymRoomPage from './pages/staff/StaffGymRoomPage'
 import StaffSubscriptionManagementPage from './pages/staff/StaffSubscriptionManagementPage'
 import StaffDashboardPage from './pages/staff/StaffDashboardPage'
 
+
+import UserDashboard from './pages/user/UserDashBoard'
+import UserSchedule from './pages/user/UserSchedule'
+import UserProgress from './pages/user/UserProgress'
+import UserMembership from './pages/user/UserMembership'
+import UserReview from './pages/user/UserReview'
+import UserProfile from './pages/user/UserProfile'
 
 function App() {
   return (
