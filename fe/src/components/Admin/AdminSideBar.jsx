@@ -1,20 +1,23 @@
 import React from 'react';
-import { FaHome, FaTools, FaUsers, FaDochub, FaRegCalendarTimes, FaUser } from "react-icons/fa";
-import { IoTime } from "react-icons/io5";
+import { FaHome, FaTools, FaUsers, FaDochub, FaRegCalendarTimes } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import { MdRoomPreferences } from "react-icons/md";
+import { LuPackage } from "react-icons/lu";
+import { MdOutlineFeedback } from "react-icons/md";
+
 
 const links = [
   { path: '/admin/dashboard', label: 'Trang chủ', icon: <FaHome /> },
-  { path: '/admin/device', label: 'Quản lý thiết bị', icon: <FaTools /> },
-  { path: '/admin/customer', label: 'Quản lý khách hàng', icon: <FaUsers /> },
-  { path: '/admin/user', label: 'Quản lý người dùng', icon: <FaDochub /> },
-  { path: '/admin/coach', label: 'Quản lý huấn luyện viên', icon: <IoTime /> },
+  { path: '/admin/staff', label: 'Quản lý nhân sự', icon: <FaDochub /> },
+  { path: '/admin/customer', label: 'Quản lý hội viên', icon: <FaUsers /> }, // chung
+  { path: '/admin/device', label: 'Quản lý thiết bị', icon: <FaTools /> }, // chung
+  { path: '/admin/gymroom', label: 'Quản lý phòng tập', icon: <MdRoomPreferences /> }, // chung
   { path: '/admin/report', label: 'Thống kê và Báo cáo', icon: <FaRegCalendarTimes /> },
-  { path: '/admin/gymroom', label: 'Quản lý phòng tập', icon: <MdRoomPreferences /> },
+  { path: '/admin/package-management', label: 'Quản lý gói tập', icon: <LuPackage /> },
+  { path: '/admin/feedback-management', label: 'Quản lý phản hồi', icon: <MdOutlineFeedback /> }, // chung
 ];
-
-const Sidebar = () => (
+ 
+const AdminSidebar = () => (
   <div className="bg-white border-end p-4" style={{ width: '250px', height: '100vh' }}>
     <h2 className="h5 mb-4">🏋️‍♂️ Administrator </h2>
     <nav>
@@ -31,4 +34,4 @@ const Sidebar = () => (
   </div>
 );
 
-export default Sidebar;
+export default AdminSidebar;

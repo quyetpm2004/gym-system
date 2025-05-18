@@ -1,4 +1,3 @@
-import Header from '../components/Admin/Header'
 import Login from '../components/Login/Login'
 function LoginPage() {
     return (

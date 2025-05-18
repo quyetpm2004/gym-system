@@ -1,8 +1,8 @@
 
-import DeviceContent from '../../components/Admin/DeviceContent'
+import DeviceContent from '../../components/Manage/DeviceContent'
 import AdminLayout from '../../components/Admin/AdminLayout'
 
-function Device() {
+function AdminDevicePage() {
     return (
         <AdminLayout>
             <DeviceContent/>
@@ -10,4 +10,4 @@ function Device() {
     )
 }
 
-export default Device
+export default AdminDevicePage

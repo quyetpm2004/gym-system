@@ -1,6 +1,6 @@
 import AdminLayout from '../../components/Admin/AdminLayout'
-import CustomerContent from '../../components/Admin/CustomerContent'
-function Customer() {
+import CustomerContent from '../../components/Manage/CustomerContent'
+function AdminCustomerPage() {
     return (
         <AdminLayout>
             <CustomerContent/>
@@ -8,4 +8,4 @@ function Customer() {
     )
 }
 
-export default Customer
+export default AdminCustomerPage

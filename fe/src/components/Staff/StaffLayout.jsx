@@ -1,13 +1,13 @@
 import React from 'react';
-import AdminSideBar from './AdminSideBar';
-import AdminHeader from './AdminHeader';
+import StaffSidebar from './StaffSidebar';
+import StaffHeader from './StaffHeader';
 
-const AdminLayout = ({ children }) => {
+const StaffLayout = ({ children }) => {
     return (
         <div className="d-flex bg-light" style={{ height: '100vh' }}>
-            <AdminSideBar />
+            <StaffSidebar />
             <div className="flex-grow-1">
-                <AdminHeader />
+                <StaffHeader />
 
                 {/* Hero section */}
                 <div style={{
@@ -26,4 +26,4 @@ const AdminLayout = ({ children }) => {
     );
 };
 
-export default AdminLayout;
+export default StaffLayout;
