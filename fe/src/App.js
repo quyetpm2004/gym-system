@@ -13,6 +13,13 @@ import TrainingPrograms from './pages/coach/TrainingPrograms'
 import TrainingProgress from './pages/coach/TrainingProgress'
 import Profiles from './pages/coach/Profiles'
 
+import UserDashboard from './pages/user/UserDashBoard'
+import UserSchedule from './pages/user/UserSchedule'
+import UserProgress from './pages/user/UserProgress'
+import UserMembership from './pages/user/UserMembership'
+import UserReview from './pages/user/UserReview'
+import UserProfile from './pages/user/UserProfile'
+
 function App() {
   return (
     <div>
@@ -33,6 +40,15 @@ function App() {
         <Route path='/coach/training-progress' element={<TrainingProgress />} />
         <Route path='/coach/training-programs' element={<TrainingPrograms />} />
         <Route path='/coach/profile' element={<Profiles />} />
+
+        {/* Route User */}
+        <Route path='/user/dashboard' element={<UserDashboard />} />
+        <Route path='/user/schedule' element={<UserSchedule />} />
+        <Route path='/user/progress' element={<UserProgress />} />
+        <Route path='/user/package' element={<UserMembership/> } />
+        <Route path='/user/evaluate' element={<UserReview/> } />
+        <Route path='/user/profile' element={<UserProfile/> } />
+
       </Routes>
     </div>
   )
