@@ -31,6 +31,9 @@ function App() {
   return (
     <div>
       <Routes>
+        {/* Login */}
+        <Route path='/' element={<LoginPage />} />
+        
         {/* Route Admin */}
         <Route path='/login' element={<LoginPage/>} />
         <Route path='/admin/dashboard' element={<AdminDashboard/>} />
@@ -57,7 +60,16 @@ function App() {
         <Route path='/coach/schedule' element={<Schedule />} />
         <Route path='/coach/training-progress' element={<TrainingProgress />} />
         <Route path='/coach/training-programs' element={<TrainingPrograms />} />
-      
+        <Route path='/coach/profile' element={<Profiles />} />
+
+        {/* Route User */}
+        <Route path='/user/dashboard' element={<UserDashboard />} />
+        <Route path='/user/schedule' element={<UserSchedule />} />
+        <Route path='/user/progress' element={<UserProgress />} />
+        <Route path='/user/package' element={<UserMembership/> } />
+        <Route path='/user/evaluate' element={<UserReview/> } />
+        <Route path='/user/profile' element={<UserProfile/> } />
+
       </Routes>
     </div>
   )
@@ -65,4 +77,3 @@ function App() {
 
 export default App
 
-// CSS module

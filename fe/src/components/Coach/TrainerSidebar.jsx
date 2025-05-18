@@ -12,7 +12,7 @@ const links = [
 ];
 
 const TrainerSidebar = () => (
-    <div className="bg-white border-end p-4" style={{ width: '250px', height: '100vh' }}>
+    <div className="bg-white border-end p-4" style={{ width: '300px'}}>
         <h2 className="h5 mb-4">🏋️‍♂️ Huấn luyện viên</h2>
         <nav>
             {links.map(({ path, label, icon }) => (

@@ -1,13 +1,13 @@
 import React from 'react';
-import TrainerSidebar from './TrainerSidebar';
-import TrainerHeader from './TrainerHeader';
+import UserSidebar from './UserSidebar';
+import UserHeader from './UserHeader';
 
-const TrainerLayout = ({ children }) => {
+const UserLayout = ({ children }) => {
     return (
         <div className="d-flex bg-light">
-            <TrainerSidebar />
+            <UserSidebar />
             <div className="flex-grow-1">
-                <TrainerHeader />
+                <UserHeader  />
 
                 {/* Hero section */}
                 <div style={{
@@ -26,4 +26,4 @@ const TrainerLayout = ({ children }) => {
     );
 };
 
-export default TrainerLayout;
+export default UserLayout;
