@@ -1,0 +1,100 @@
+/* overlay */
+.mf-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+/* modal container */
+.mf-container {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* header with gradient */
+.mf-header {
+  background: #418fba;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mf-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* body grid */
+.mf-body {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.mf-field {
+  display: flex;
+  flex-direction: column;
+}
+.mf-field label {
+  margin-bottom: 4px;
+  font-size: 0.875rem;
+  color: #252b36;
+}
+.mf-field input,
+.mf-field select {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+.mf-radio-group {
+  display: flex;
+  gap: 8px;
+}
+.mf-radio {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+/* footer */
+.mf-footer {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+.btn-cancel {
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.btn-submit {
+  background: #418fba;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background: #4338ca;
+}
