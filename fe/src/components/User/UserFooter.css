@@ -1,0 +1,37 @@
+.bg-dark {
+          background-color: #1a1a1a !important;
+        }
+        .text-teal {
+          color: #00cc99 !important;
+        }
+        .text-coral {
+          color: #ff6f61 !important;
+        }
+        .border-teal {
+          border-color: #00cc99 !important;
+        }
+        .btn-coral {
+          background-color: #ff6f61 !important;
+          border-color: #ff6f61 !important;
+        }
+        .btn-coral:hover {
+          background-color: #e65a50 !important;
+          border-color: #e65a50 !important;
+        }
+        .text-secondary {
+          color: #a0a0a0 !important;
+        }
+        .hover-teal:hover {
+          opacity: 0.8 !important;
+        }
+        .form-control.bg-dark {
+          background-color: #2a2a2a !important;
+          border-color: #00cc99 !important;
+          color: #e0e0e0 !important;
+        }
+        .form-control.bg-dark::placeholder {
+          color: #a0a0a0 !important;
+        }
+        footer {
+          box-shadow: 0 -4px 10px rgba(0, 255, 204, 0.1);
+        }

@@ -1,0 +1,32 @@
+ .bg-dark {
+          background-color: #1a1a1a !important;
+        }
+        .text-teal {
+          color: #00cc99 !important;
+        }
+        .text-coral {
+          color: #ff6f61 !important;
+        }
+        .border-teal {
+          border-color: #00cc99 !important;
+        }
+        .nav-link:hover {
+          color: #00cc99 !important;
+        }
+        .dropdown-menu {
+          background-color: #1a1a1a !important;
+          border-radius: 0.5rem;
+        }
+        .dropdown-item:hover {
+          background-color: #00cc99 !important;
+          color: #fff !important;
+        }
+        .hover-teal:hover {
+          background-color: #00cc99 !important;
+          color: #fff !important;
+        }
+        .btn-outline-light:hover {
+          background-color: #00cc99 !important;
+          border-color: #00cc99 !important;
+          color: #fff !important;
+        }
