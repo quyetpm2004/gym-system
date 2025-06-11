@@ -38,7 +38,6 @@ ul li::marker {
 }
 
 .slide {
-  display: none;
   width: 100%;
   height: 100%; 
 }
@@ -114,4 +113,57 @@ ul li::marker {
   .slide img {
     height: 300px; /* Điều chỉnh chiều cao ảnh trên màn hình nhỏ */
   }
+}
+
+.bg-dark {
+  background-color: #1a1b1a !important;
+}
+.text-teal {
+    color: #00ccff !important;
+}
+.text-coral {
+  color: #ff6f61 !important;
+}
+.hover-teal:hover {
+  opacity: 0.8 !important;
+        }
+        .text-secondary {
+          color: #a0a0a0 !important;
+        }
+        .dashboard-img {
+          transition: transform 0.3s ease;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+          background-color: rgba(0, 191, 153, 0.5);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          background-size: 50%;
+        }
+        .carousel-indicators {
+          bottom: -40px;
+        }
+        .carousel-indicators [data-bs-target] {
+          background-color: #a0a0a0;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+        .carousel-indicators .active {
+          background-color: #00cc99;
+        }
+        .section-content {
+          transition: box-shadow 0.3s ease;
+        }
+        .section-content:hover {
+          box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2) !important;
+        }
+.image-slide-show {
+  border-radius: 10px;
 }

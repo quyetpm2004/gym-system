@@ -5,22 +5,11 @@ import UserFooter from './UserFooter';
 
 const UserLayout = ({ children }) => {
     return (
-        <div>
-            <div className="container">
+        <div style={{backgroundColor: '#1a1a1a'}}>
+            <div className="container" >
                 <UserHeader  />
 
-                {/* Hero section */}
-                <div style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1594737625785-c84c4ec6ba4f')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    color: 'white',
-                    textAlign: 'center',
-                    position: 'relative'
-                }}>
-                </div>
-
-                <main className="p-4 overflow-auto">{children}</main>
+                <main className="overflow-auto mt-5" >{children}</main>
                 
                 <UserFooter/>
             </div>
