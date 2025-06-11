@@ -62,19 +62,28 @@ export default function TrainerDashboard() {
                 </div>
             ))}
 
-            {/* Nút điều hướng */}
-            <a
-                className="prev"
-                onClick={() => plusSlides(-1)}
-                style={{ textDecoration: 'none' }}>
-                ❮
-            </a>
-            <a
-                className="next"
-                onClick={() => plusSlides(1)}
-                style={{ textDecoration: 'none' }}>
-                ❯
-            </a>
+            <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+                onClick={() => plusSlides(-1)}>
+                <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+                onClick={() => plusSlides(-1)}>
+                <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+            </button>
 
             {/* Chỉ báo (dots) */}
             <div className="dots-container">
