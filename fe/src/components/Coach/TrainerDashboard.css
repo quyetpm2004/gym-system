@@ -1,86 +1,92 @@
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1240px; 
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-  height: 550px; 
+    max-width: 1240px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    height: 550px;
 }
 
 .slide {
-  display: none;
-  width: 100%;
-  height: 100%; 
+    display: none;
+    width: 100%;
+    height: 100%;
 }
 
 .slide img {
-  width: 100%;
-  height: 550px; 
-  object-fit: cover;
-  object-position: center;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Hiệu ứng chuyển đổi */
 .slide.active {
-  display: block;
-  animation: fade 1.5s ease-in-out;
+    display: block;
+    animation: fade 1.5s ease-in-out;
 }
 
 @keyframes fade {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Nút điều hướng */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 57%;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.5);
-  user-select: none;
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 57%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
 }
 
 .next {
-  right: 0;
+    right: 0;
 }
 
 .prev {
-  left: 0;
+    left: 0;
 }
 
 /* Chỉ báo (dots) */
 .dots-container {
-  text-align: center;
-  margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-.dot.active, .dot:hover {
-  background-color: #717171;
+.dot.active,
+.dot:hover {
+    background-color: #717171;
 }
 
 /* Đảm bảo ảnh responsive nhưng giữ tỷ lệ */
 @media (max-width: 768px) {
-  .slideshow-container {
-    max-width: 100%;
-    height: 300px; /* Giảm chiều cao trên màn hình nhỏ */
-  }
+    .slideshow-container {
+        max-width: 100%;
+        height: 300px; /* Giảm chiều cao trên màn hình nhỏ */
+    }
 
-  .slide img {
-    height: 300px; /* Điều chỉnh chiều cao ảnh trên màn hình nhỏ */
-  }
+    .slide img {
+        height: 300px; /* Điều chỉnh chiều cao ảnh trên màn hình nhỏ */
+    }
 }
