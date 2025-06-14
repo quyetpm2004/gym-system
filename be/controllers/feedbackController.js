@@ -1,25 +1,42 @@
-import { feedbackModel } from "../models/feedbackModel.js";
+import {
+    submitFeedbackService,
+    getFeedbacksByTargetService,
+} from '../services/feedbackService.js';
 
 // Gửi phản hồi
-const submitFeedback = async (req, res) => {
+export const submitFeedback = async (req, res) => {
     const { userId, rating, message, target, relatedUser } = req.body;
+
     try {
-        const feedback = await feedbackModel.create({ user: userId, rating, message, target, relatedUser });
+        const feedback = await submitFeedbackService({
+            user: userId,
+            rating,
+            message,
+            target,
+            relatedUser,
+        });
         res.json({ success: true, feedback });
-    } catch {
-        res.json({ success: false, message: "Error submitting feedback" });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Error submitting feedback',
+            error: error.message,
+        });
     }
 };
 
 // Lấy phản hồi theo loại (GYM, STAFF, TRAINER)
-const getFeedbacksByTarget = async (req, res) => {
+export const getFeedbacksByTarget = async (req, res) => {
     const { target } = req.params;
+
     try {
-        const list = await feedbackModel.find({ target }).populate("user", "name");
-        res.json({ success: true, feedbacks: list });
-    } catch {
-        res.json({ success: false, message: "Error fetching feedbacks" });
+        const feedbacks = await getFeedbacksByTargetService(target);
+        res.json({ success: true, feedbacks });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Error fetching feedbacks',
+            error: error.message,
+        });
     }
 };
-
-export { submitFeedback, getFeedbacksByTarget };

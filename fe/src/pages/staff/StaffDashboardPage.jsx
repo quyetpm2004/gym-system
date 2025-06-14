@@ -1,10 +1,10 @@
 import StaffLayout from '../../components/Staff/StaffLayout'
-import StaffDashboard from '../../components/Staff/StaffDashboard'
+import ManageDashboard from '../../components/Manage/ManageDashboard'
 
 function StaffDashboardPage() {
     return (
         <StaffLayout>
-            <StaffDashboard />
+            <ManageDashboard/>
         </StaffLayout>
     )
 }

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import ButtonAddNew from "../Button/ButtonAddNew";
 import './DeviceContent.css';
-import ModalForm from "../Admin/Modal/ModalForm";
-import ActionButtons from "../Button/ActionButtons";
+import ModalForm from "../Modal/ModalForm";
+import ActionButtons from "../Button/ButtonAction";
 import { getAllDevices, createDevice, updateDevice, deleteDevice } from '../../services/api';
 
 export default function DeviceContent() {

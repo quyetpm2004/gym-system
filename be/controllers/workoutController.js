@@ -1,33 +1,32 @@
-import { workoutModel } from "../models/workoutModel.js";
+import {
+    logWorkoutService,
+    getWorkoutByUserService,
+} from '../services/workoutService.js';
 
 // Ghi nhận buổi tập
-const logWorkout = async (req, res) => {
-    const { userId, trainerId, durationMinutes, notes } = req.body;
+export const logWorkout = async (req, res) => {
     try {
-        const workout = await workoutModel.create({
-            user: userId,
-            trainer: trainerId,
-            durationMinutes,
-            notes,
-            date: new Date()
-        });
+        const workout = await logWorkoutService(req.body);
         res.json({ success: true, workout });
     } catch (err) {
-        console.log(err);
-        res.json({ success: false, message: "Error logging workout" });
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: 'Error logging workout',
+        });
     }
 };
 
 // Lấy lịch sử tập của 1 hội viên
-const getWorkoutByUser = async (req, res) => {
-    const { userId } = req.params;
+export const getWorkoutByUser = async (req, res) => {
     try {
-        const logs = await workoutModel.find({ user: userId }).populate("trainer", "name");
+        const logs = await getWorkoutByUserService(req.params.userId);
         res.json({ success: true, workouts: logs });
     } catch (err) {
-        console.log(err);
-        res.json({ success: false, message: "Error fetching logs" });
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: 'Error fetching logs',
+        });
     }
 };
-
-export { logWorkout, getWorkoutByUser };

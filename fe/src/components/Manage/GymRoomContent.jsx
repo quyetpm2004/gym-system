@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ButtonAddNew from "../Button/ButtonAddNew";
-import ActionButtons from "../Button/ActionButtons";
-import ModalForm from "../Admin/Modal/ModalForm";
+import ActionButtons from "../Button/ButtonAction";
+import ModalForm from "../Modal/ModalForm";
 import { getAllGymRooms, createGymRoom, updateGymRoom, deleteGymRoom } from '../../services/api';
 
 export default function GymRoomContent() {

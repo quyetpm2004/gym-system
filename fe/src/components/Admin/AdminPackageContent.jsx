@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ButtonAddNew from "../Button/ButtonAddNew";
-import ActionButtons from "../Button/ActionButtons";
-import ModalForm from "./Modal/ModalForm";
+import ActionButtons from "../Button/ButtonAction";
+import ModalForm from "../Modal/ModalForm";
 import { getAllPackages, createPackage, updatePackage, deletePackage, getAllUsers } from '../../services/api';
 import { getAllMemberships, registerMembership, updatePaymentStatus, updateCoach } from '../../services/membershipApi';
 
@@ -315,7 +315,8 @@ export default function AdminPackageContent() {
         </thead>
         <tbody>
           {memberships.map((m) => (
-            <tr key={m._id}>
+            m.user && (
+              <tr key={m._id}>
               <td>{m.user?.name || ''}</td>
               <td>{m.package?.name || ''}</td>
               <td>{m.coach?.name || 'Chưa có'}</td>
@@ -335,6 +336,8 @@ export default function AdminPackageContent() {
                 </div>
               </td>
             </tr>
+            )
+            
           ))}
         </tbody>
       </table>

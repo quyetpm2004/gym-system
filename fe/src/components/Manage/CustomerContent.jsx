@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import ButtonAddNew from '../Button/ButtonAddNew';
-import ModalForm from '../Admin/Modal/ModalForm';
-import ActionButtons from '../Button/ActionButtons';
-import UsageHistoryModal from '../Admin/Modal/UsageHistoryModal';
+import ModalForm from '../Modal/ModalForm';
+import ActionButtons from '../Button/ButtonAction';
+import UsageHistoryModal from '../Modal/UsageHistoryModal';
 import {
     getAllUsers,
     register,

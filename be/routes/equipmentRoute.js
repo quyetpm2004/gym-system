@@ -1,17 +1,20 @@
-import express from "express";
+import express from 'express';
 import {
     addEquipment,
     getAllEquipment,
     updateEquipment,
-    deleteEquipment
-} from "../controllers/equipmentController.js";
-import authMiddleware from "../middleware/auth.js";
+    deleteEquipment,
+} from '../controllers/equipmentController.js';
+import authMiddleware from '../middlewares/auth.js';
 
 const equipmentRouter = express.Router();
 
-equipmentRouter.post("/", authMiddleware, addEquipment);
-equipmentRouter.get("/", getAllEquipment);
-equipmentRouter.put("/:id", authMiddleware, updateEquipment);
-equipmentRouter.delete("/:id", authMiddleware, deleteEquipment);
+// Áp dụng middleware xác thực cho tất cả các route trừ GET
+equipmentRouter.use(['/'], authMiddleware);
+
+// Định nghĩa các route
+equipmentRouter.route('/').post(addEquipment).get(getAllEquipment);
+
+equipmentRouter.route('/:id').put(updateEquipment).delete(deleteEquipment);
 
 export default equipmentRouter;

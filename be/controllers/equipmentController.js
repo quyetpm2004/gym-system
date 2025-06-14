@@ -1,48 +1,64 @@
-import { equipmentModel } from "../models/equipmentModel.js";
+import {
+    addEquipmentService,
+    getAllEquipmentService,
+    updateEquipmentService,
+    deleteEquipmentService,
+} from '../services/equipmentService.js';
 
 // Thêm thiết bị
-const addEquipment = async (req, res) => {
-    const { name, quantity, condition, purchaseDate, warrantyExpiry, notes } = req.body;
+export const addEquipment = async (req, res) => {
     try {
-        const equipment = await equipmentModel.create({
-            name, quantity, condition, purchaseDate, warrantyExpiry, notes
-        });
+        const equipment = await addEquipmentService(req.body);
         res.json({ success: true, equipment });
-    } catch {
-        res.json({ success: false, message: "Error adding equipment" });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Error adding equipment',
+            error: error.message,
+        });
     }
 };
 
 // Lấy tất cả thiết bị
-const getAllEquipment = async (req, res) => {
+export const getAllEquipment = async (req, res) => {
     try {
-        const list = await equipmentModel.find();
+        const list = await getAllEquipmentService();
         res.json({ success: true, equipment: list });
-    } catch {
-        res.json({ success: false, message: "Error fetching equipment" });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Error fetching equipment',
+            error: error.message,
+        });
     }
 };
 
 // Cập nhật thiết bị
-const updateEquipment = async (req, res) => {
+export const updateEquipment = async (req, res) => {
     const { id } = req.params;
     try {
-        const updated = await equipmentModel.findByIdAndUpdate(id, req.body, { new: true });
+        const updated = await updateEquipmentService(id, req.body);
         res.json({ success: true, equipment: updated });
-    } catch {
-        res.json({ success: false, message: "Error updating equipment" });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Error updating equipment',
+            error: error.message,
+        });
     }
 };
 
 // Xóa thiết bị
-const deleteEquipment = async (req, res) => {
+export const deleteEquipment = async (req, res) => {
     const { id } = req.params;
     try {
-        await equipmentModel.findByIdAndDelete(id);
-        res.json({ success: true, message: "Deleted successfully" });
-    } catch {
-        res.json({ success: false, message: "Error deleting equipment" });
+        await deleteEquipmentService(id);
+        res.json({ success: true, message: 'Deleted successfully' });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Error deleting equipment',
+            error: error.message,
+        });
     }
 };
-
-export { addEquipment, getAllEquipment, updateEquipment, deleteEquipment };

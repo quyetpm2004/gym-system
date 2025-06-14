@@ -1,5 +1,4 @@
 import React from 'react';
-import UserSidebar from './UserSidebar';
 import UserHeader from './UserHeader';
 import UserFooter from './UserFooter';
 

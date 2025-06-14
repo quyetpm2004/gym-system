@@ -1,78 +1,92 @@
-import { packageModel } from "../models/packageModel.js";
+import {
+    createPackageService,
+    getAllPackagesService,
+    getPackageByIdService,
+    updatePackageService,
+    deletePackageService,
+} from '../services/packageService.js';
 
 // Tạo gói tập mới
-const createPackage = async (req, res) => {
-    const { name, durationInDays, sessionLimit, price, withTrainer } = req.body;
+export const createPackage = async (req, res) => {
     try {
-        const newPackage = await packageModel.create({
-            name,
-            durationInDays,
-            sessionLimit,
-            price,
-            withTrainer,
-        });
+        const newPackage = await createPackageService(req.body);
         res.json({ success: true, package: newPackage });
     } catch (err) {
-        console.log(err);
-        res.json({ success: false, message: "Error creating package" });
+        res.status(500).json({
+            success: false,
+            message: 'Error creating package',
+            error: err.message,
+        });
     }
 };
 
 // Lấy tất cả các gói tập
-const getAllPackages = async (req, res) => {
+export const getAllPackages = async (req, res) => {
     try {
-        const packages = await packageModel.find();
+        const packages = await getAllPackagesService();
         res.json({ success: true, packages });
     } catch (err) {
-        console.log(err);
-        res.json({ success: false, message: "Error fetching packages" });
+        res.status(500).json({
+            success: false,
+            message: 'Error fetching packages',
+            error: err.message,
+        });
     }
 };
 
 // Lấy 1 gói tập theo ID
-const getPackageById = async (req, res) => {
+export const getPackageById = async (req, res) => {
     const { id } = req.params;
     try {
-        const onePackage = await packageModel.findById(id);
-        if (!onePackage) return res.json({ success: false, message: "Package not found" });
+        const onePackage = await getPackageByIdService(id);
+        if (!onePackage)
+            return res
+                .status(404)
+                .json({ success: false, message: 'Package not found' });
         res.json({ success: true, package: onePackage });
     } catch (err) {
-        console.log(err);
-        res.json({ success: false, message: "Error fetching package" });
+        res.status(500).json({
+            success: false,
+            message: 'Error fetching package',
+            error: err.message,
+        });
     }
 };
 
 // Cập nhật gói tập
-const updatePackage = async (req, res) => {
+export const updatePackage = async (req, res) => {
     const { id } = req.params;
-    const updateData = req.body;
     try {
-        const updated = await packageModel.findByIdAndUpdate(id, updateData, { new: true });
-        if (!updated) return res.json({ success: false, message: "Package not found" });
+        const updated = await updatePackageService(id, req.body);
+        if (!updated)
+            return res
+                .status(404)
+                .json({ success: false, message: 'Package not found' });
         res.json({ success: true, package: updated });
     } catch (err) {
-        console.log(err);
-        res.json({ success: false, message: "Error updating package" });
+        res.status(500).json({
+            success: false,
+            message: 'Error updating package',
+            error: err.message,
+        });
     }
 };
 
 // Xoá gói tập
-const deletePackage = async (req, res) => {
+export const deletePackage = async (req, res) => {
     const { id } = req.params;
     try {
-        const deleted = await packageModel.findByIdAndDelete(id);
-        if (!deleted) return res.json({ success: false, message: "Package not found" });
-        res.json({ success: true, message: "Package deleted" });
+        const deleted = await deletePackageService(id);
+        if (!deleted)
+            return res
+                .status(404)
+                .json({ success: false, message: 'Package not found' });
+        res.json({ success: true, message: 'Package deleted' });
     } catch (err) {
-        console.log(err);
-        res.json({ success: false, message: "Error deleting package" });
+        res.status(500).json({
+            success: false,
+            message: 'Error deleting package',
+            error: err.message,
+        });
     }
-};
-
-export {
-    createPackage,
-    getAllPackages,
-    getPackageById,
-    updatePackage,
-    deletePackage
 };
