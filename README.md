@@ -14,8 +14,8 @@ BTL môn Phát triển phần mềm ITSS - IT4549 - 156730, 2024.2, SoICT
 
 ```
 gym-system
-├── fe/                        # Mã nguồn Front-end
-│   ├── public/		       # File tĩnh, ảnh, tài nguyên dùng chung.
+├── fe/                         # Mã nguồn Front-end
+│   ├── public/		        # File tĩnh, ảnh, tài nguyên dùng chung.
 │   ├── src/
 │   │   ├── components/       	# Các thành phần (component) giao diện tái sử dụng, phân theo vai trò/nghiệp vụ.
 │   │   ├── pages/           	# Các trang ứng dụng, phân theo loại người dùng.
@@ -26,8 +26,8 @@ gym-system
 │   │   ├── css/            	# File CSS toàn cục.
 │   │   ├── test/		# Các file kiểm thử.
 │   │   └── utils/            	# Hàm tiện ích.
-│   ├── **package.json, jsconfig.json, .babelrc, ui.config.json** 	# Các file cấu hình.
-│   └── **App.js, index.js** 	# Điểm khởi tạo ứng dụng.
+│   ├── package.json, jsconfig.json, .babelrc, ui.config.json 	# Các file cấu hình.
+│   └── App.js, index.js 	# Điểm khởi tạo ứng dụng.
 ├── be/                        	# Mã nguồn Back-end,
 │   ├── config/               	# Cấu hình DB, dữ liệu mẫu.
 │   ├── controllers/        	# Xử lý logic cho các API endpoint.
@@ -38,8 +38,8 @@ gym-system
 │   ├── services/             	# Xử lý nghiệp vụ, thao tác dữ liệu.
 │   ├── tests/		        # Unit test cho từng module, model.
 │   ├── utils/                	# Thư viện hàm tiện ích dùng chung.
-│   ├── **app.js, server.js** 	# Khởi tạo server, cấu hình middleware và route chính.
-│   └── **.env, package.json, jest.config.json** 	# Các file cấu hình môi trường, package và test.
+│   ├── app.js, server.js 	# Khởi tạo server, cấu hình middleware và route chính.
+│   └── .env, package.json, jest.config.json 	# Các file cấu hình môi trường, package và test.
 └── README.md                  	# Tài liệu dự án
 ```
 
