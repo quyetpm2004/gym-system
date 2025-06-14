@@ -228,7 +228,8 @@ const SubscriptionManagement = () => {
             </tr>
           ) : (
             filteredData.map((sub, index) => (
-              <tr key={sub.id}>
+              sub.name && (
+                <tr key={sub.id}>
                 <td>{sub.name}</td>
                 <td>{sub.packageName}</td>
                 <td>{sub.coach?.name || 'Chưa có'}</td>
@@ -262,6 +263,8 @@ const SubscriptionManagement = () => {
                   </div>
                 </td>
               </tr>
+              )
+              
             ))
           )}
         </tbody>

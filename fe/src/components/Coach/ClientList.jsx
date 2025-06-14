@@ -128,7 +128,8 @@ export default function ClientList() {
                                         const bgColor = colorList[colorIdx];
 
                                         return (
-                                            <tr
+                                            m.user && (
+                                              <tr
                                                 key={m._id}
                                                 style={{ cursor: 'pointer' }}
                                                 onClick={() => handleViewDetails(m)}
@@ -169,7 +170,9 @@ export default function ClientList() {
                                                         <FaRegTrashAlt size={16} /> Xóa
                                                     </button>
                                                 </td>
-                                            </tr>
+                                            </tr>  
+                                            )
+                                            
                                         );
                                     })}
                                 </tbody>

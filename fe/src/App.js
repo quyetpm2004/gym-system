@@ -27,7 +27,7 @@ import StaffCustomerPage from './pages/staff/StaffCustomerPage'
 import StaffFeedbackPage from './pages/staff/StaffFeedbackPage'
 import StaffDevicePage from './pages/staff/StaffDevicePage'
 import StaffGymRoomPage from './pages/staff/StaffGymRoomPage'
-import StaffSubscriptionManagementPage from './pages/staff/StaffSubscriptionManagementPage'
+import SubscriptionManagementPage from './pages/staff/StaffSubscriptionManagementPage'
 import StaffDashboardPage from './pages/staff/StaffDashboardPage'
 
 // User
@@ -122,7 +122,7 @@ function App() {
         } />
         <Route path='/staff/subscription-management' element={
           <ProtectedRoute allowedRoles={['staff', 'admin']}>
-            <StaffSubscriptionManagementPage />
+            <SubscriptionManagementPage />
           </ProtectedRoute>
         } />
         <Route path='/staff/feedback-management' element={

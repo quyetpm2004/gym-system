@@ -1,7 +1,7 @@
 import StaffLayout from '../../components/Staff/StaffLayout'
-import SubscriptionManagement from '../../components/Staff/SubscriptionManagement'
+import SubscriptionManagement from '../../components/Staff/StaffSubscriptionManagement'
 
-function StaffSubscriptionManagementPage() {
+function SubscriptionManagementPage() {
     return (
         <StaffLayout>
             <SubscriptionManagement />
@@ -9,4 +9,4 @@ function StaffSubscriptionManagementPage() {
     )
 }
 
-export default StaffSubscriptionManagementPage
+export default SubscriptionManagementPage

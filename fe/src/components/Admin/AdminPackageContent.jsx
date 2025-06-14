@@ -315,7 +315,8 @@ export default function AdminPackageContent() {
         </thead>
         <tbody>
           {memberships.map((m) => (
-            <tr key={m._id}>
+            m.user && (
+              <tr key={m._id}>
               <td>{m.user?.name || ''}</td>
               <td>{m.package?.name || ''}</td>
               <td>{m.coach?.name || 'Chưa có'}</td>
@@ -335,6 +336,8 @@ export default function AdminPackageContent() {
                 </div>
               </td>
             </tr>
+            )
+            
           ))}
         </tbody>
       </table>

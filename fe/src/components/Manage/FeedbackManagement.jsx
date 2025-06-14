@@ -42,7 +42,7 @@ export default function FeedbackManager() {
         // Chuẩn hóa dữ liệu cho bảng
         setFeedbacks(allFeedbacks.map(fb => ({
           id: fb._id,
-          memberName: fb.user?.name || 'Ẩn danh',
+          memberName: fb.user?.name,
           date: new Date(fb.createdAt).toLocaleDateString('vi-VN'),
           type: fb.target === 'GYM' ? 'Cơ sở vật chất' : fb.target === 'STAFF' ? 'Nhân viên' : 'Huấn luyện viên',
           content: fb.message,
@@ -118,7 +118,8 @@ export default function FeedbackManager() {
         </thead>
         <tbody>
           {filteredFeedbacks.map((fb) => (
-            <tr key={fb.id}>
+            fb.memberName && (
+              <tr key={fb.id}>
               <td>{fb.memberName}</td>
               <td>{fb.date}</td>
               <td>{fb.type}</td>
@@ -130,6 +131,8 @@ export default function FeedbackManager() {
                 </Button>
               </td>
             </tr>
+            )
+            
           ))}
         </tbody>
       </table>
