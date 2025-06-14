@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent } from "../../lib/ui/card";
 import { CiCalendar } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { FaRegShareFromSquare } from "react-icons/fa6";

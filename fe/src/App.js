@@ -12,19 +12,15 @@ import DevicePage from './pages/admin/AdminDevicePage'
 import CustomerPage from './pages/admin/AdminCustomerPage'
 import StaffPage from './pages/admin/AdminStaffPage'
 import PackagePage from './pages/admin/AdminPackagePage'
-import AdminPackageChangePage from './pages/admin/AdminPackageChangePage'
 import ReportPage from './pages/admin/AdminReportPage'
 import FeedbackPage from './pages/admin/AdminFeedbackPage'
 import GymRoom from './pages/admin/AdminGymRoomPage'
 
 // Coach
-import Dashboard from './pages/coach/Dashboard'
-import Clients from './pages/coach/Clients'
-import Schedule from './pages/coach/Schedule'
-import TrainingPrograms from './pages/coach/TrainingPrograms'
-import TrainingProgress from './pages/coach/TrainingProgress'
-import Profiles from './pages/coach/TrainingPrograms'
-import EditProgressScreen from './pages/coach/EditProgressScreen'
+import Dashboard from './pages/coach/CoachDashboardPage'
+import Clients from './pages/coach/CoachClientsPage'
+import Schedule from './pages/coach/CoachSchedulePage'
+import TrainingPrograms from './pages/coach/CoachTrainingProgramsPage'
 
 // Staff
 import StaffCustomerPage from './pages/staff/StaffCustomerPage'
@@ -39,7 +35,6 @@ import UserDashboard from './pages/user/UserDashBoard'
 import UserSchedule from './pages/user/UserSchedule'
 import UserProgress from './pages/user/UserProgress'
 import UserMembership from './pages/user/UserMembership'
-import UserPackageChangePage from './pages/user/UserPackageChangePage'
 import UserReview from './pages/user/UserReview'
 import UserProfile from './pages/user/UserProfile'
 
@@ -113,11 +108,6 @@ function App() {
             <PackagePage />
           </ProtectedRoute>
         } />
-        <Route path='/admin/package-change' element={
-          <ProtectedRoute allowedRoles={['admin']}>
-            <AdminPackageChangePage />
-          </ProtectedRoute>
-        } />
         <Route path='/admin/feedback-management' element={
           <ProtectedRoute allowedRoles={['admin']}>
             <FeedbackPage />
@@ -177,21 +167,6 @@ function App() {
             <TrainingPrograms />
           </ProtectedRoute>
         } />
-        <Route path='/coach/progress' element={
-          <ProtectedRoute allowedRoles={['coach', 'admin']}>
-            <TrainingProgress />
-          </ProtectedRoute>
-        } />
-        <Route path='/coach/profile' element={
-          <ProtectedRoute allowedRoles={['coach', 'admin']}>
-            <Profiles />
-          </ProtectedRoute>
-        } />
-        <Route path='/coach/edit-progress' element={
-          <ProtectedRoute allowedRoles={['coach', 'admin']}>
-            <EditProgressScreen />
-          </ProtectedRoute>
-        } />
 
         {/* User Routes */}
         <Route path='/user/dashboard' element={
@@ -212,11 +187,6 @@ function App() {
         <Route path='/user/package' element={
           <ProtectedRoute allowedRoles={['user', 'admin']}>
             <UserMembership />
-          </ProtectedRoute>
-        } />
-        <Route path='/user/package-change' element={
-          <ProtectedRoute allowedRoles={['user', 'admin']}>
-            <UserPackageChangePage />
           </ProtectedRoute>
         } />
         <Route path='/user/evaluate' element={

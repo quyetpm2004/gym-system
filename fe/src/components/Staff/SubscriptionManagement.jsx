@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
 import ButtonAddNew from "../Button/ButtonAddNew";
-import ActionButtons from "../Button/ActionButtons";
-import ModalForm from "../Admin/Modal/ModalForm"; 
+import ActionButtons from "../Button/ButtonAction";
+import ModalForm from "../Modal/ModalForm"; 
 import { getAllMemberships, updateCoach } from '../../services/membershipApi';
 import { getAllUsers } from '../../services/api';
 
@@ -205,9 +205,8 @@ const SubscriptionManagement = () => {
       {successMsg && <div className="alert alert-success my-3">{successMsg}</div>}
 
       <Table bordered hover responsive className="mt-3">
-        <thead className="table-light">
+        <thead className="table">
           <tr>
-            <th>ID</th>
             <th>Họ và tên</th>
             <th>Gói tập</th>
             <th>HLV phụ trách</th>
@@ -230,7 +229,6 @@ const SubscriptionManagement = () => {
           ) : (
             filteredData.map((sub, index) => (
               <tr key={sub.id}>
-                <td>{sub.id}</td>
                 <td>{sub.name}</td>
                 <td>{sub.packageName}</td>
                 <td>{sub.coach?.name || 'Chưa có'}</td>

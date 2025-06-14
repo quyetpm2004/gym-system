@@ -4,7 +4,7 @@ import authService from '../../services/authService';
 import { SiOpenaigym } from 'react-icons/si';
 import { NavLink } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
-import { Navbar, Nav, Container, Dropdown, Button } from 'react-bootstrap';
+import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
 import './UserHeader.css'
 
 const UserHeader = () => {

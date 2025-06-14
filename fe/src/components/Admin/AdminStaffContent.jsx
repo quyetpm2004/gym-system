@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import ButtonAddNew from '../Button/ButtonAddNew';
-import ActionButtons from '../Button/ActionButtons';
+import ActionButtons from '../Button/ButtonAction';
 import { FaSearch } from 'react-icons/fa';
-import ModalForm from './Modal/ModalForm';
+import ModalForm from '../Modal/ModalForm';
 import {
     getAllUsers,
     register,

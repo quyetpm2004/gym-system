@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ModalDetailFeedback from "../Admin/Modal/ModalDetailFeedback";
+import ModalDetailFeedback from "../Modal/ModalDetailFeedback";
 import { Button, Form } from "react-bootstrap";
 import { getFeedbacksByTarget } from '../../services/api';
 

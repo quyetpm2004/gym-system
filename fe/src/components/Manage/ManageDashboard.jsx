@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import '../../styles/adminDashboard.css';
+import './ManageDashboard.css';
 import StatCard from "./StatCard";
-import RecentUsageTable from "../Manage/RecentUsageTable";
+import RecentUsageTable from "./RecentUsageTable";
 import ServiceUsageChart from "./ServiceUsageChart";
 import { MdRoomPreferences } from "react-icons/md";
 import { FaTools, FaUsers } from "react-icons/fa";
@@ -17,7 +17,7 @@ import {
   getAllMemberships
 } from '../../services/api';
 
-export default function AdminDashboard() {
+export default function ManageDashboard() {
   const [stats, setStats] = useState({
     totalCustomers: 0,
     totalRoom: 0,

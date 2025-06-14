@@ -1,9 +1,9 @@
 import AdminLayout from '../../components/Admin/AdminLayout'
-import Dashboard from '../../components/Admin/AdminDashboard'
+import ManageDashboard from '../../components/Manage/ManageDashboard'
 function AdminDashboardPage() {
     return (
         <AdminLayout>
-            <Dashboard/>
+            <ManageDashboard/>
         </AdminLayout>
     )
 }

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { MdEdit, MdPersonAdd } from "react-icons/md";
 import { FaRegTrashAlt } from "react-icons/fa";
-import ModalEditMember from './Modal/ModalEditMember';
-import ModalAddMember from './Modal/ModalAddMember';
+import ModalEditMember from '../Modal/ModalEditMember';
+import ModalAddMember from '../Modal/ModalAddMember';
 import { getMembershipsByCoach, updateMembershipStatus } from '../../services/membershipApi';
 import authService from '../../services/authService';
 import './ClientList.css'; // Giữ file CSS nếu cần style tùy chỉnh

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ButtonAddNew from "../Button/ButtonAddNew";
-import ActionButtons from "../Button/ActionButtons";
-import ModalForm from "./Modal/ModalForm";
+import ActionButtons from "../Button/ButtonAction";
+import ModalForm from "../Modal/ModalForm";
 import { getAllPackages, createPackage, updatePackage, deletePackage, getAllUsers } from '../../services/api';
 import { getAllMemberships, registerMembership, updatePaymentStatus, updateCoach } from '../../services/membershipApi';
 
